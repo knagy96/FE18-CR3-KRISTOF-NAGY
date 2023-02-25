@@ -1,0 +1,15 @@
+.card {
+    margin: 30px;
+    border-color: antiquewhite;
+    background-color: antiquewhite;
+}
+
+img {
+    object-fit: cover;
+}
+
+button {
+    border-color: white;
+    margin: 10px;
+    text-align: center;
+}

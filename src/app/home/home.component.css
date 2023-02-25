@@ -1,0 +1,9 @@
+img {
+    height: 60vh;
+}
+
+.card {
+    margin: 30px;
+    border-color: antiquewhite;
+    background-color: antiquewhite;
+}

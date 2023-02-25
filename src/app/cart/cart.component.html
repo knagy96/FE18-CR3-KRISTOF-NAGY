@@ -1,0 +1,31 @@
+<div class="content shadow  m-4 p-3 bg align-items-center text-center row row-cols-3">
+    <h3>Your Cart:</h3>
+
+    <div class="card" style="width: 18rem; margin: 15px;" *ngFor="let item of cart">
+        <img src="{{item.image}}" class="card-img-top">
+        <div class="card-body">
+            <p class="card-text">{{item.description}}</p>
+            <p>{{item.price }} Euro</p>
+        </div>
+    </div>
+
+</div>
+<hr>
+<span style="padding: 10px;"><strong> Products: </strong> {{this.total}} Euro </span>
+<p style="padding-left: 10px ;margin-bottom: 3px"> Service : {{this.service}} Euro</p>
+<p style="padding-left: 10px ; margin-bottom: 3px"> Discount : {{this.discount}} Euro </p>
+<hr>
+<p style="padding-left: 10px ; margin-bottom: 3px"> <strong>Total Amount (inclouding VAT) : {{this.amount}} Euro </strong>
+</p>
+
+
+
+<div class="m-3 ">
+    <label for="exampleFormControlInput1" class="form-label">Name</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+</div>
+<div class="m-3">
+    <label for="exampleFormControlInput1" class="form-label">Adresse</label>
+    <input class="form-control" id="exampleFormControlInput">
+</div>
+<div class="btn btn-primary m-3 ">Purchase</div>

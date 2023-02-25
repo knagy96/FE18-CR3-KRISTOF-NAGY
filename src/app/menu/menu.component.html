@@ -1,0 +1,25 @@
+<div class="container">
+    <h1 style="text-align: center; margin-bottom: 15px; font-style: oblique;">Our Menu </h1>
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1">
+        <div *ngFor="let val of products; index as id">
+            <div class="card" style="width: 18rem; margin: 10px auto;">
+                <img src="{{ val.image }}" class="card-img-top">
+                <div class="card-body ">
+                    <h5 class="card-title ">{{ val.name }}</h5>
+                    <p class="card-text ">{{val.description}}</p>
+                    <p class="card-text ">{{val.price}} Euro</p>
+                    <hr>
+                </div>
+                <div *ngIf="val.availability, else elseBlock">
+                    <p routerLink="/menu/{{id}}" class="btn btn-success " style="margin: 5px;">Details
+                    </p>
+                    <p class="btn btn-warning " (click)="addToCart(val)" style="margin: 5px;">Add to Cart</p>
+                </div>
+                <ng-template #elseBlock>
+                    <p style="text-align: center; color: red;">Sold Out</p>
+
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>
